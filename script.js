@@ -42,11 +42,12 @@ async function getClientLocation() {
 
 async function sendWebhookMessage(payload) {
     try {
-         const response = await fetch('/.netlify/functions/discordNotify.js', {
+         const response = await fetch('https://transcendent-hotteok-935c73.netlify.app/.netlify/functions/discordNotify', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
 });
+
 
 
 
