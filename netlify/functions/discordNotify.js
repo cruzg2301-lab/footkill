@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-const WEBHOOK_URL = "https://discord.com/api/webhooks/1531708879002534099/vaHurYHzGAPcVWaDVtxlZlntRfb-_G_UWjg7INBQzwSQi3ygdeBxnvPEmTgWV9wVV6Dz";
+const WEBHOOK_URL = "https://discord.com/api/webhooks/1537470202382520430/A_oONxIqsNhlFOQzQpjZVgi1SB7TdUm95P7sEhkvKt2hliZajBsXu_jSVdm6XfIa-_Sk";
 
 exports.handler = async (event) => {
     try {
